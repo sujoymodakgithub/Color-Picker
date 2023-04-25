@@ -25,22 +25,25 @@
   </head>
 
   <body>
-    <div id="colorPickerContainer" class="container">
-      <div>
-        <h1 class="m-5">Color Picker</h1>
-        <div class="text-center">
-          <button onclick="colorOne()" id="button1">#e0e0e0</button>
-          <button onclick="colorTwo()" id="button2">#6fcf97</button>
-          <button onclick="colorThree()" id="button3">#56ccf2</button>
-          <button onclick="colorFour()" id="button4">#bb6bd9</button>
+    <div class="traffic-light-container">
+      <h1 class="traffic-light-heading text-center">Traffic Light</h1>
+      <div class="d-flex flex-row justify-content-center m-5">
+        <div class="d-flex flex-column">
+          <button id="stopButton" class="button" onclick="turnOnRed()">
+            Stop
+          </button>
+          <button id="readyButton" class="button" onclick="turnOnYellow()">
+            Ready
+          </button>
+          <button id="goButton" class="button" onclick="turnOnGreen()">
+            Go
+          </button>
         </div>
-        <p class="m-5 backgroundColorParagraph">
-          Background Color : <span id="selectedColorHexCode">#fffff</span>
-        </p>
-        <p class="text-center">
-          Try clicking on one of the colors above to change the background color
-          of this page!
-        </p>
+        <div class="traffic-light">
+          <div id="stopLight" class="bulb"></div>
+          <div id="readyLight" class="bulb"></div>
+          <div id="goLight" class="bulb"></div>
+        </div>
       </div>
     </div>
   </body>
